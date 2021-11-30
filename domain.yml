@@ -1,0 +1,44 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- query_thalassemia:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_thalassemia:
+  - text: Thalassemia is an inherited blood disorder caused by a mutation in the globin gene. The condition causes the body to produce abnormal hemoglobin in red blood cells, which in turn causes anaemia. Red blood cells are important for carrying oxygen throughout the body. Thalassaemia is a life threatening inherited disorder. The clinical severity of Thalassaemia varies widely ranging from asymptomatic to severe or even fatal forms . The severe forms require repaeated blood transfusions. Frequent blood transfusions also result in iron overload in different body organs.
+actions: []
+forms: {}
+e2e_actions: []

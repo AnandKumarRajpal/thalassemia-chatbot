@@ -1,0 +1,148 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: query_thalassemia
+  examples: |
+    - What is thalassemia?
+    - Is thalassemia a disease?
+    - What thalassemia actually is?
+    - What does thalassemia mean?
+
+- intent: cause_thalassemia
+  examples: |
+    - What are the causes of thalassaemia?
+    - What causes Thalassemia?
+    - What are the reasons for thalassemia?
+    - What are the causes of thalassemic disease?
+    - The causes of thalassemia?
+
+- intent: carrier
+  examples: |
+    - Who is a Thalassaemia Carrier?
+    - Who carries thalassemia?
+    - What is a thalassemia carrier?
+    - What is Thalassemia Minor?
+    - What is Carrier?
+
+- intent: detection
+  examples: |
+    - How early is it possible to detect Thalassaemia in a child after the child is born?	
+    - When is it possible to detect thalassemia in an infant after birth?
+    - When is thalessemia detected?
+
+- intent: symptoms
+  examples: |
+    - How to tell if your child is thalassaemic?	
+    - How do I know whether my child is thalassemic?
+    - How do I know if my child has thalassemia?
+    - What are the symptoms of thalassemia?
+    - How to identify thalassemia?
+    - How does thalassaemia major first show itself?
+
+- intent: prevention
+  examples: |
+    - Can Thalassaemia be prevented? 
+    - Is thalassemia a preventable disease?
+    - Is thalassemia avoidable?
+
+- intent: treatment
+  examples: |
+    - How do we treat thalassemia major?
+    - How to deal with major thalassemia?
+    - How to treat thalessemia?
+    - How to manage major thalassemia?
+    - What are the treatments for Thalassemia Major?
+# How can Thalassemia be treated?
+# Do you carry Thalassemia?
+# How do you inherit Thalassemia?
+# How can we prevent Thalassemia?
