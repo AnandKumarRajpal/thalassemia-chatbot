@@ -40,18 +40,78 @@ stories:
       - intent: deny
       - action: utter_goodbye
 
-  - story: about thalassaemia
+  - story: about thalassaemia patient
     steps:
       - intent: greet
       - action: utter_greet
       - intent: patient
       - action: utter_patient
+      - intent: treatment_centres
+      - action: action_query_database
+      - intent: query_thalassemia
+      - action: utter_thalassemia
+      - intent: prevention
+      - action: utter_prevention
+      - intent: major_treatment
+      - action: utter_major_treatment
+      - intent: no_treatment
+      - action: utter_no_treatment
+      - intent: home_care
+      - action: utter_home_care
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: about thalassaemia info
+    steps:
+      - intent: greet
+      - action: utter_greet
       - intent: onlyinfo
       - action: utter_info
       - intent: query_thalassemia
       - action: utter_thalassemia
-      - intent: treatment_centres
-      - action: action_query_database
+      - intent: types
+      - action: utter_types
+      - action: utter_info_majorthal
+      - action: utter_info_minorthal
+      - intent: cause_thalassemia
+      - action: utter_cause
+      - intent: symptoms
+      - action: utter_symptoms
+      - intent: prevention
+      - action: utter_prevention
+      - intent: major_treatment
+      - action: utter_major_treatment
+      - intent: complications
+      - action: utter_complications
+      - intent: quality_of_life
+      - action: utter_quality
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: about thalassaemia info 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: onlyinfo
+      - action: utter_info
+      - intent: query_thalassemia
+      - action: utter_thalassemia
+      - intent: types
+      - action: utter_types
+      - action: utter_info_majorthal
+      - action: utter_info_minorthal
+      - intent: carrier
+      - action: utter_minor
+      - intent: detection
+      - action: utter_detect
+      - intent: blood_info
+      - action: utter_blood_info
+      - intent: blood_quality
+      - action: utter_blood_quality
+      - intent: blood_transfusion
+      - action: utter_blood_transfusion
+      - intent: inherit
+      - action: utter_inherit
       - intent: treatment_centres
       - action: action_query_database
       - intent: goodbye

@@ -127,6 +127,9 @@ nlu:
       - What is a thalassemia carrier?
       - What is Thalassemia Minor?
       - What is Carrier?
+      - What is minor thalassemia?
+      - Is minor thalssemia real?
+      - What does minor thalassemia mean?
 
   - intent: detection
     examples: |
@@ -172,7 +175,6 @@ nlu:
 
   - intent: blood_info
     examples: |
-
       - What is haemoglobin?
       - What is blood?
       - What does blood do?
@@ -180,7 +182,6 @@ nlu:
 
   - intent: blood_quality
     examples: |
-
       - Is the blood clean?
       - What does blood do?
       - What is the blood made of?
@@ -209,14 +210,13 @@ nlu:
       - What is major thalassemia?
       - Is major thalssemia real?
       - What does major thalassemia mean?
+  # - intent: info_minorthal
+  #   examples: |
+  #     - What is minor thalassemia?
+  #     - Is minor thalssemia real?
+  #     - What does minor thalassemia mean?
 
-  - intent: info_minorthal
-    examples: |
-      - What is minor thalassemia?
-      - Is minor thalssemia real?
-      - What does minor thalassemia mean?
-
-  - intent: quality_of-life
+  - intent: quality_of_life
     examples: |
       - What is the average life expectancy of a patient?
       - How long can one live?
@@ -227,7 +227,7 @@ nlu:
       - are there any complications?
       - is there a risk?
       - What are the risks?
-  - intent: Home_care
+  - intent: home_care
     examples: |
       - Which healthy habits can i implement?
       - What can i do from home to treat myself?
@@ -296,13 +296,20 @@ nlu:
       - i am a patient
       - i have thalassemia
       - I am sick
+  - intent: types
+    examples: |
+      - How many types of thalassemia are there?
+      - What are the two types of thalassemia?
+      - 2 types?
+      - what are the different kinds of thalassemia?
 
-  # - lookup: city
-  # examples: |
-  #   - Peshawar
-  #   - Multan
-  #   - Lahore
-  #   - Islamabad
-  #   - Hyderabad
-  #   - Faisalabad
-  #   - Dera Bugti
+  - lookup: city
+    examples: |
+      - Peshawar
+      - Multan
+      - Lahore
+      - Islamabad
+      - Hyderabad
+      - Faisalabad
+      - Dera Bugti
+      - Sukkur
