@@ -25,3 +25,43 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+
+from rasa_sdk import Action
+
+
+def get_centers(city=None):
+    centers = [
+        {"name": "Test", "city": "Karachi"},
+        {"name": "Test1", "city": "Rawalpindi"},
+        {"name": "Test3", "city": "Faisalabad"},
+        {"name": "Test2", "city": "Lahore"},
+    ]
+    if city:
+        return [
+            center for center in centers if center["city"] == city
+        ], "Here are some of the available centers in {}:".format(city)
+    else:
+        return [], "No available centers found in {}:".format(city)
+
+
+class ActionQueryDatabase(Action):
+    def name(self):
+        return "action_query_database"
+
+    def run(self, dispatcher, tracker, domain):
+        city = tracker.get_slot("city")
+        # hotel = tracker.get_slot("hotel")
+        # cuisine = tracker.get_slot("cuisine")
+        # results = [{"name": "دی لکھنوی"}]
+        # message = ""
+
+        results, message = get_centers(city=city)
+        # else:
+        # results, message = get_centers()
+        dispatcher.utter_message(message)
+        # limit to top 5 queries
+        for i, obj in enumerate(results):
+            dispatcher.utter_message(str(i + 1) + " - " + obj["name"])
+
+        return []

@@ -1,44 +1,118 @@
-version: '2.0'
+version: "2.0"
 config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- query_thalassemia:
-    use_entities: true
-entities: []
-slots: {}
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - mood_great:
+      use_entities: true
+  - mood_unhappy:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - query_thalassemia:
+      use_entities: true
+  - carrier:
+      use_entities: true
+  - Home_care:
+      use_entities: true
+  - info_majorthal:
+      use_entities: true
+  - Multan_Treatment_centres:
+      use_entities: true
+  - blood_quality:
+      use_entities: true
+  - minor_treatment:
+      use_entities: true
+  - Peshawar_Treatment_centres:
+      use_entities: true
+  - major_treatment:
+      use_entities: true
+  - cause_thalassemia:
+      use_entities: true
+  - Hyderabad_Treatment_centres:
+      use_entities: true
+  - no_treatment:
+      use_entities: true
+  - detection:
+      use_entities: true
+  - info_minorthal:
+      use_entities: true
+  - blood_transfusion:
+      use_entities: true
+  - quality_of-life:
+      use_entities: true
+  - prevention:
+      use_entities: true
+  - symptoms:
+      use_entities: true
+  - inherit:
+      use_entities: true
+  - Lahore_Treatment_centres:
+      use_entities: true
+  - treatment_centres:
+      use_entities: true
+  - blood_info:
+      use_entities: true
+  - complications:
+      use_entities: true
+  - DeaBugti_Treatment_centres:
+      use_entities: true
+  - Islamabad_Treatment_centres:
+      use_entities: true
+  - Faisalabad_Treatment_centres:
+      use_entities: true
+  - patient:
+      use_entities: true
+  - onlyinfo:
+      use_entities: true
+  - onboarding:
+      use_entities: true
+entities:
+  - city
+slots:
+  city:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
-  - text: Hey! How are you?
+    - buttons:
+        - payload: /onlyinfo
+          title: I am here for general information. Tell me more about Thallesemia
+        - payload: /patient
+          title: I am a patient
+      text: Hey! I am excited to assist you. Before we move ahead, Let us know more about you
+  utter_info:
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: "Prevention is the only cure to Thalassemia. Tell us your city to get tested in nearest clinics for free! "
+  utter_patient:
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: "Regularity of treatment improves the quality of life. Tell us your city to get treated in nearest clinics for free! "
   utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: "Here is something to cheer you up:"
   utter_did_that_help:
-  - text: Did that help you?
+    - text: Did that help you?
   utter_happy:
-  - text: Great, carry on!
+    - text: Great, carry on!
   utter_goodbye:
-  - text: Bye
+    - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+    - text: I am a bot, powered by Rasa.
   utter_thalassemia:
-  - text: Thalassemia is an inherited blood disorder caused by a mutation in the globin gene. The condition causes the body to produce abnormal hemoglobin in red blood cells, which in turn causes anaemia. Red blood cells are important for carrying oxygen throughout the body. Thalassaemia is a life threatening inherited disorder. The clinical severity of Thalassaemia varies widely ranging from asymptomatic to severe or even fatal forms . The severe forms require repaeated blood transfusions. Frequent blood transfusions also result in iron overload in different body organs.
-actions: []
+    - text: Thalassemia is an inherited blood disorder caused by a mutation in the globin gene. The condition causes the body to produce abnormal hemoglobin in red blood cells, which in turn causes anaemia. Red blood cells are important for carrying oxygen throughout the body. Thalassaemia is a life threatening inherited disorder. The clinical severity of Thalassaemia varies widely ranging from asymptomatic to severe or even fatal forms . The severe forms require repaeated blood transfusions. Frequent blood transfusions also result in iron overload in different body organs.
+actions:
+  - action_query_database
 forms: {}
 e2e_actions: []

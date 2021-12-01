@@ -1,148 +1,308 @@
 version: "2.0"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: onlyinfo
+    examples: |
+      - Information
+      - General knowledge
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - yay
+      - yayyy
+      - yahuu
+      - wuhuu
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: onboarding
+    examples: |
+      - Thank you for choosing us. Feel free to ask any questions
+      - We are here to help. Feel free to ask any questions
 
-- intent: query_thalassemia
-  examples: |
-    - What is thalassemia?
-    - Is thalassemia a disease?
-    - What thalassemia actually is?
-    - What does thalassemia mean?
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: cause_thalassemia
-  examples: |
-    - What are the causes of thalassaemia?
-    - What causes Thalassemia?
-    - What are the reasons for thalassemia?
-    - What are the causes of thalassemic disease?
-    - The causes of thalassemia?
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- intent: carrier
-  examples: |
-    - Who is a Thalassaemia Carrier?
-    - Who carries thalassemia?
-    - What is a thalassemia carrier?
-    - What is Thalassemia Minor?
-    - What is Carrier?
+  - intent: query_thalassemia
+    examples: |
+      - What is thalassemia?
+      - Is thalassemia a disease?
+      - What thalassemia actually is?
+      - What does thalassemia mean?
 
-- intent: detection
-  examples: |
-    - How early is it possible to detect Thalassaemia in a child after the child is born?	
-    - When is it possible to detect thalassemia in an infant after birth?
-    - When is thalessemia detected?
+  - intent: cause_thalassemia
+    examples: |
+      - What are the causes of thalassaemia?
+      - What causes Thalassemia?
+      - What are the reasons for thalassemia?
+      - What are the causes of thalassemic disease?
+      - The causes of thalassemia?
 
-- intent: symptoms
-  examples: |
-    - How to tell if your child is thalassaemic?	
-    - How do I know whether my child is thalassemic?
-    - How do I know if my child has thalassemia?
-    - What are the symptoms of thalassemia?
-    - How to identify thalassemia?
-    - How does thalassaemia major first show itself?
+  - intent: carrier
+    examples: |
+      - Who is a Thalassaemia Carrier?
+      - Who carries thalassemia?
+      - What is a thalassemia carrier?
+      - What is Thalassemia Minor?
+      - What is Carrier?
 
-- intent: prevention
-  examples: |
-    - Can Thalassaemia be prevented? 
-    - Is thalassemia a preventable disease?
-    - Is thalassemia avoidable?
+  - intent: detection
+    examples: |
+      - How early is it possible to detect Thalassaemia in a child after the child is born?	
+      - When is it possible to detect thalassemia in an infant after birth?
+      - When is thalessemia detected?
 
-- intent: treatment
-  examples: |
-    - How do we treat thalassemia major?
-    - How to deal with major thalassemia?
-    - How to treat thalessemia?
-    - How to manage major thalassemia?
-    - What are the treatments for Thalassemia Major?
-# How can Thalassemia be treated?
-# Do you carry Thalassemia?
-# How do you inherit Thalassemia?
-# How can we prevent Thalassemia?
+  - intent: symptoms
+    examples: |
+      - How to tell if your child is thalassaemic?	
+      - How do I know whether my child is thalassemic?
+      - How do I know if my child has thalassemia?
+      - What are the symptoms of thalassemia?
+      - How to identify thalassemia?
+      - How does thalassaemia major first show itself?
+
+  - intent: prevention
+    examples: |
+      - Can Thalassaemia be prevented? 
+      - Is thalassemia a preventable disease?
+      - Is thalassemia avoidable?
+      - How do I get rid of it?
+      - How to prevent it?
+
+  - intent: major_treatment
+    examples: |
+      - How do we treat thalassemia major?
+      - How to deal with major thalassemia?
+      - How to treat thalessemia?
+      - How to manage major thalassemia?
+      - What are the treatments for Thalassemia Major?
+  - intent: no_treatment
+    examples: |
+      - What happens if thalassaemia is not treated?
+
+  - intent: minor_treatment
+    examples: |
+      - How do we treat thalassemia minor?
+      - How to deal with minor thalassemia?
+      - How to treat thalessemia?
+      - How to manage minor thalassemia?
+      - What are the treatments for Thalassemia minor?
+
+  - intent: blood_info
+    examples: |
+
+      - What is haemoglobin?
+      - What is blood?
+      - What does blood do?
+      - What is the blood made of?
+
+  - intent: blood_quality
+    examples: |
+
+      - Is the blood clean?
+      - What does blood do?
+      - What is the blood made of?
+      - How is the blood tested?
+      - Is the blood purified?
+
+  - intent: blood_transfusion
+    examples: |
+      - Why do Thalassaemics need frequent blood transfusions?
+      - Why do we need blood transfusions?
+      - How does blood tranfusion help?
+      - What is blood transfusion?
+      - Are blood transfusions necessary?
+      - How often should one get transfusion?
+
+  - intent: inherit
+    examples: |
+      - How is it inherited?
+      - How do I inherit it?
+      - How is this passed on?
+      - Is this inherited?
+      - How is thalassaemia passed on from parents to their children?
+
+  - intent: info_majorthal
+    examples: |
+      - What is major thalassemia?
+      - Is major thalssemia real?
+      - What does major thalassemia mean?
+
+  - intent: info_minorthal
+    examples: |
+      - What is minor thalassemia?
+      - Is minor thalssemia real?
+      - What does minor thalassemia mean?
+
+  - intent: quality_of-life
+    examples: |
+      - What is the average life expectancy of a patient?
+      - How long can one live?
+
+  - intent: complications
+    examples: |
+      - What are the complications in thalassemia?
+      - are there any complications?
+      - is there a risk?
+      - What are the risks?
+  - intent: Home_care
+    examples: |
+      - Which healthy habits can i implement?
+      - What can i do from home to treat myself?
+      - How do i take care at home?
+      - What lifestyle changes do i do?
+      - Any lifestyle changes that i should do?
+
+  - intent: treatment_centres
+    examples: |
+      - Where do i get myself treated in [Karachi](city)?
+      - Where to go for testing in [Dera Bugti](city)?
+      - How do i get tested in [Faisalabad](city)?
+      - Where to go for treatment in [Lahore](city)?
+  # - intent: DeaBugti_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Dera Bugti?
+  #     - Where to go for testing in Dera Bugti?
+  #     - How do i get tested in Dera Bugti?
+  #     - Where to go for treatment in Dera Bugti?
+  # - intent: Faisalabad_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Faisalabad?
+  #     - Where to go for testing in Faisalabad?
+  #     - How do i get tested in Faisalabad?
+  #     - Where to go for treatment in Faisalabad?
+
+  # - intent: Hyderabad_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Hyderabad?
+  #     - Where to go for testing in Hyderabad?
+  #     - How do i get tested in Hyderabad?
+  #     - Where to go for treatment in Hyderabad?
+
+  # - intent: Islamabad_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Islamabad?
+  #     - Where to go for testing in Islamabad?
+  #     - How do i get tested in Islamabad?
+  #     - Where to go for treatment in Islamabad?
+
+  # - intent: Lahore_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Lahore?
+  #     - Where to go for testing in Lahore?
+  #     - How do i get tested in Lahore?
+  #     - Where to go for treatment in Lahore?
+
+  # - intent: Multan_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Multan?
+  #     - Where to go for testing in Multan?
+  #     - How do i get tested in Multan?
+  #     - Where to go for treatment in Multan?
+
+  # - intent: Peshawar_Treatment_centres
+  #   examples: |
+  #     - Where do i get myself treated in Peshawar?
+  #     - Where to go for testing in Peshawar?
+  #     - How do i get tested in Peshawar?
+  #     - Where to go for treatment in Peshawar?
+
+  - intent: patient
+    examples: |
+      - suffering
+      - patient
+      - i am a patient
+      - i have thalassemia
+      - I am sick
+
+  # - lookup: city
+  # examples: |
+  #   - Peshawar
+  #   - Multan
+  #   - Lahore
+  #   - Islamabad
+  #   - Hyderabad
+  #   - Faisalabad
+  #   - Dera Bugti
