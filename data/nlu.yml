@@ -120,7 +120,7 @@ nlu:
       - What are the causes of thalassemic disease?
       - The causes of thalassemia?
 
-  - intent: carrier
+  - intent: carrier ##not working
     examples: |
       - Who is a Thalassaemia Carrier?
       - Who carries thalassemia?
@@ -131,13 +131,20 @@ nlu:
       - Is minor thalssemia real?
       - What does minor thalassemia mean?
 
-  - intent: detection
+  - intent: detection ###
     examples: |
       - How early is it possible to detect Thalassaemia in a child after the child is born?	
       - When is it possible to detect thalassemia in an infant after birth?
       - When is thalessemia detected?
+      - How do i detect thalassemia?
+      - How do i know i have thalassemia?
+      - detect
+      - detection
+      - test result
+      - results
+      
 
-  - intent: symptoms
+  - intent: symptoms ###
     examples: |
       - How to tell if your child is thalassaemic?	
       - How do I know whether my child is thalassemic?
@@ -145,6 +152,11 @@ nlu:
       - What are the symptoms of thalassemia?
       - How to identify thalassemia?
       - How does thalassaemia major first show itself?
+      - Am I thalassemic?
+      - thalassemic
+      - symptoms
+      - any symptoms
+    
 
   - intent: prevention
     examples: |
@@ -165,7 +177,7 @@ nlu:
     examples: |
       - What happens if thalassaemia is not treated?
 
-  - intent: minor_treatment
+  - intent: minor_treatment ####
     examples: |
       - How do we treat thalassemia minor?
       - How to deal with minor thalassemia?
@@ -204,8 +216,13 @@ nlu:
       - How is this passed on?
       - Is this inherited?
       - How is thalassaemia passed on from parents to their children?
+      - parents
+      - genetics 
+      - genes
+      - heredity
+    
 
-  - intent: info_majorthal
+  - intent: info_majorthal ####
     examples: |
       - What is major thalassemia?
       - Is major thalssemia real?
@@ -220,6 +237,14 @@ nlu:
     examples: |
       - What is the average life expectancy of a patient?
       - How long can one live?
+      - How long will i live?
+      - Can I participate in sports?
+      - sport activities
+      - cardio
+      - does it lead to death?
+      - will i die?
+      - die
+      - death
 
   - intent: complications
     examples: |

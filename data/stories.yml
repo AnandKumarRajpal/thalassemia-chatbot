@@ -50,12 +50,20 @@ stories:
       - action: action_query_database
       - intent: query_thalassemia
       - action: utter_thalassemia
+      - intent: info_majorthal
+      - action: utter_info_majorthal
+      - intent: symptoms
+      - action: utter_symptoms
       - intent: prevention
       - action: utter_prevention
       - intent: major_treatment
       - action: utter_major_treatment
+      - intent: minor_treatment
+      - action: utter_minor_treatment
       - intent: no_treatment
       - action: utter_no_treatment
+      - intent: carrier
+      - action: utter_minor
       - intent: home_care
       - action: utter_home_care
       - intent: goodbye
@@ -69,6 +77,10 @@ stories:
       - action: utter_info
       - intent: query_thalassemia
       - action: utter_thalassemia
+      - intent: carrier
+      - action: utter_minor
+      - intent: info_majorthal
+      - action: utter_info_majorthal
       - intent: types
       - action: utter_types
       - action: utter_info_majorthal
@@ -77,10 +89,14 @@ stories:
       - action: utter_cause
       - intent: symptoms
       - action: utter_symptoms
+      - intent: detection
+      - action: utter_detect
       - intent: prevention
       - action: utter_prevention
       - intent: major_treatment
       - action: utter_major_treatment
+      - intent: minor_treatment
+      - action: utter_minor_treatment
       - intent: complications
       - action: utter_complications
       - intent: quality_of_life
@@ -96,10 +112,16 @@ stories:
       - action: utter_info
       - intent: query_thalassemia
       - action: utter_thalassemia
+      - intent: symptoms
+      - action: utter_symptoms
+      - intent: info_majorthal
+      - action: utter_info_majorthal
       - intent: types
       - action: utter_types
       - action: utter_info_majorthal
       - action: utter_info_minorthal
+      - intent: minor_treatment
+      - action: utter_minor_treatment
       - intent: carrier
       - action: utter_minor
       - intent: detection

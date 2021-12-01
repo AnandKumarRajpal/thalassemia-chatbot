@@ -1,87 +1,73 @@
-version: "2.0"
+version: '2.0'
 config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-  - greet:
-      use_entities: true
-  - goodbye:
-      use_entities: true
-  - affirm:
-      use_entities: true
-  - deny:
-      use_entities: true
-  - mood_great:
-      use_entities: true
-  - mood_unhappy:
-      use_entities: true
-  - bot_challenge:
-      use_entities: true
-  - query_thalassemia:
-      use_entities: true
-  - carrier:
-      use_entities: true
-  - home_care:
-      use_entities: true
-  - info_majorthal:
-      use_entities: true
-  # - Multan_Treatment_centres:
-  #     use_entities: true
-  - blood_quality:
-      use_entities: true
-  - minor_treatment:
-      use_entities: true
-  # - Peshawar_Treatment_centres:
-  #     use_entities: true
-  - major_treatment:
-      use_entities: true
-  - cause_thalassemia:
-      use_entities: true
-  # - Hyderabad_Treatment_centres:
-  #     use_entities: true
-  - no_treatment:
-      use_entities: true
-  - detection:
-      use_entities: true
-  - info_minorthal:
-      use_entities: true
-  - blood_transfusion:
-      use_entities: true
-  - quality_of_life:
-      use_entities: true
-  - prevention:
-      use_entities: true
-  - symptoms:
-      use_entities: true
-  - inherit:
-      use_entities: true
-  # - Lahore_Treatment_centres:
-  #     use_entities: true
-  - treatment_centres:
-      use_entities: true
-  - blood_info:
-      use_entities: true
-  - complications:
-      use_entities: true
-  # - DeaBugti_Treatment_centres:
-  #     use_entities: true
-  # - Islamabad_Treatment_centres:
-  #     use_entities: true
-  # - Faisalabad_Treatment_centres:
-  #     use_entities: true
-  - patient:
-      use_entities: true
-  - onlyinfo:
-      use_entities: true
-  - onboarding:
-      use_entities: true
-  - types:
-      use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- query_thalassemia:
+    use_entities: true
+- carrier:
+    use_entities: true
+- home_care:
+    use_entities: true
+- info_majorthal:
+    use_entities: true
+- blood_quality:
+    use_entities: true
+- minor_treatment:
+    use_entities: true
+- major_treatment:
+    use_entities: true
+- cause_thalassemia:
+    use_entities: true
+- no_treatment:
+    use_entities: true
+- detection:
+    use_entities: true
+- info_minorthal:
+    use_entities: true
+- blood_transfusion:
+    use_entities: true
+- quality_of_life:
+    use_entities: true
+- prevention:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- inherit:
+    use_entities: true
+- treatment_centres:
+    use_entities: true
+- blood_info:
+    use_entities: true
+- complications:
+    use_entities: true
+- patient:
+    use_entities: true
+- onlyinfo:
+    use_entities: true
+- onboarding:
+    use_entities: true
+- types:
+    use_entities: true
 entities:
-  - city
-  - GPE
+- city
+- GPE
 slots:
   city:
     type: rasa.shared.core.slots.TextSlot
@@ -90,95 +76,97 @@ slots:
     influence_conversation: true
 responses:
   utter_greet:
-    - buttons:
-        - payload: /onlyinfo
-          title: I am here for general information. Tell me more about Thallesemia
-        - payload: /patient
-          title: I am a patient
-      text: Hey! I am excited to assist you. Before we move ahead, Let us know more about you
+  - buttons:
+    - payload: /onlyinfo
+      title: I am here for general information. Tell me more about Thallesemia
+    - payload: /patient
+      title: I am a patient
+    text: Hey! I am excited to assist you. Before we move ahead, Let us know more about you
   utter_info:
-    - image: https://drive.google.com/uc?id=17y4tZMvLGfDtmb99qI4EkRwViH0-ViAs#infoperson.jpg​
-      text: "Prevention is the only cure to Thalassemia. Tell us your city to get tested in nearest clinics for free!"
+  - image: https://drive.google.com/uc?id=17y4tZMvLGfDtmb99qI4EkRwViH0-ViAs#infoperson.jpg​
+    text: Prevention is the only cure to Thalassemia. Tell us your city to get tested in nearest clinics for free!
   utter_patient:
-    - image: https://drive.google.com/uc?id=1N1xe9BrokybKgZOMzNqNeqsVogq4rLLh#Patient.jpg
-      text: "Regularity of treatment improves the quality of life. Tell us your city to get treated in nearest clinics for free!"
+  - image: https://drive.google.com/uc?id=1N1xe9BrokybKgZOMzNqNeqsVogq4rLLh#Patient.jpg
+    text: Regularity of treatment improves the quality of life. Tell us your city to get treated in nearest clinics for free!
   utter_cheer_up:
-    - image: https://i.imgur.com/nGF1K8f.jpg
-      text: "Here is something to cheer you up:"
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
   utter_did_that_help:
-    - text: Did that help you?
+  - text: Did that help you?
   utter_happy:
-    - text: Great, carry on!
+  - text: Great, carry on!
   utter_goodbye:
-    - text: It was great helping you! See you!
+  - text: It was great helping you! See you!
   utter_iamabot:
-    - text: I am a bot, powered by Rasa.
+  - text: I am a bot, powered by Rasa.
   utter_thalassemia:
-    - text: Thalassaemia is a life threatening inherited disorder. It causes anemia in the body. This results in  your body being unable to carry adequate oxygen to your body tissues.
+  - text: Thalassaemia is a life threatening inherited disorder. It causes anemia in the body. This results in  your body being unable to carry adequate oxygen to your body tissues.
   utter_cause:
-    - text: It is a disease passed on from parents to children. Both parents need to be carriers for the disease to be transmitted.
+  - text: It is a disease passed on from parents to children. Both parents need to be carriers for the disease to be transmitted.
   utter_minor:
-    - text: One is a carrier if they only carry the defective gene from one of the parents and the other gene is normal. Such a person is said to be a thalassemia minor.
+  - text: One is a carrier if they only carry the defective gene from one of the parents and the other gene is normal. Such a person is said to be a thalassemia minor.
   utter_detect:
-    - text: Thalassemia can be detected in children 7 months and older through a blood test.
+  - text: Thalassemia can be detected in children 7 months and older through a blood test.
   utter_symptoms:
-    - text: |
-        A child suffering from the disease will develop anemia and may experience the following symptoms:
-        - fuzziness
-        - paleness
-        - frequent infections
-        - poor appetite
-        - failure to thrive
-        - jaundice (yellowing of the skin and whites of the eyes)
+  - text: |
+      If you are experiencing any of the following symptoms, We suggest you to get tested as soon as possible.
+      - fuzziness
+      - paleness
+      - frequent infections
+      - poor appetite
+      - failure to thrive
+      - jaundice (yellowing of the skin and whites of the eyes)
   utter_prevention:
-    - text: The way to prevent thalassaemia is to prevent the birth of an affected child. Detection is through Prenatal diagnosis; the ability to detect abnormalities in an unborn child.
+  - text: The way to prevent thalassaemia is to prevent the birth of an affected child. Detection is through Prenatal diagnosis; the ability to detect abnormalities in an unborn child.
   utter_major_treatment:
-    - text: |
-        The traditional treatment consists of:
-        - blood transfusion
-        - removing the spleen (splenectomy)
-        - desferal treatment
-        However a bone marrow transplant can also be done (varies case to case)
+  - text: |
+      The traditional treatment consists of:
+      - blood transfusion
+      - removing the spleen (splenectomy)
+      - desferal treatment
+      However a bone marrow transplant can also be done (varies case to case)
   utter_no_treatment:
-    - text: |
-        With no treatment a child suffers with the following:
-        - Bones becoming weak
-        - Suffering from “hypersplenism"
-        - face and body shape disfiguring
-        - Anemia gets worse
-        - Problems in liver, heart and spleen
+  - text: |
+      With no treatment a child suffers with the following:
+      - Bones becoming weak
+      - Suffering from “hypersplenism"
+      - face and body shape disfiguring
+      - Anemia gets worse
+      - Problems in liver, heart and spleen
   utter_blood_info:
-    - text: Blood is made up of light yellow liquid, called plasma, and of three types of “cells”  called red cells, white cells and platelets. Hemoglobin is a protein in your red blood cells that carries oxygen to your body's organs and tissues.
+  - text: Blood is made up of light yellow liquid, called plasma, and of three types of “cells”  called red cells, white cells and platelets. Hemoglobin is a protein in your red blood cells that carries oxygen to your body's organs and tissues.
   utter_blood_quality:
-    - text: The blood is purified by a chemical which is added to a donated bag of blood. This breaks up the genetic material of any viruses or bacteria lurking inside so they can't infect it. A blood test usually involves taking a blood sample from a blood vessel in your arm.
+  - text: The blood is purified by a chemical which is added to a donated bag of blood. This breaks up the genetic material of any viruses or bacteria lurking inside so they can't infect it. A blood test usually involves taking a blood sample from a blood vessel in your arm.
   utter_blood_transfusion:
-    - text: The normal lifespan of a red blood cell is 120 days, but in thalassemics this is shortened. To maintain red cell viability and function, thalassaemia patients are given blood transfusions. The transfusion of red cells corrects anaemia and makes sure the tissues get a normal amount of oxygen so that the body can grow and function normally. A patient should get transfusions every two to five weeks.
+  - text: The normal lifespan of a red blood cell is 120 days, but in thalassemics this is shortened. To maintain red cell viability and function, thalassaemia patients are given blood transfusions. The transfusion of red cells corrects anaemia and makes sure the tissues get a normal amount of oxygen so that the body can grow and function normally. A patient should get transfusions every two to five weeks.
   utter_inherit:
-    - text: The disease is  carried in the genes and passed on from parents to children. People who are carriers of a thalassemia gene show no thalassemia symptoms and might not know they're carriers. If both parents are carriers, they can pass the disease to their offspring.
+  - text: The disease is  carried in the genes and passed on from parents to children. People who are carriers of a thalassemia gene show no thalassemia symptoms and might not know they're carriers. If both parents are carriers, they can pass the disease to their offspring.
   utter_info_majorthal:
-    - text: Thalassemia major is the most severe form of beta thalassemia. It develops when beta globin genes are missing. It is a major disease that affects about 60,000 people every year.
+  - text: Thalassemia major is the most severe form of beta thalassemia. It develops when beta globin genes are missing. It is a major disease that affects about 60,000 people every year.
   utter_info_minorthal:
-    - text: Thalassemia minor is a less serious form of the disorder. They have normal life expectancy and do not have to get blood transfusions. They are just carriers of the disease.
+  - text: Thalassemia minor is a less serious form of the disorder. They have normal life expectancy and do not have to get blood transfusions. They are just carriers of the disease.
   utter_quality:
-    - text: If proper treatment and care is taken, a thalassemia patient should be able to lead a normal life. They can participate in sports if they do not have any heart problems. Patients can live upto 50 years if proper care is taken.
+  - text: If proper treatment and care is taken, a thalassemia patient should be able to lead a normal life. They can participate in sports if they do not have any heart problems. Patients can live upto 50 years if proper care is taken.
   utter_complications:
-    - text: |
-        There are many risks from thalassemia if proper care is not taken. These include:
-        - heart disease (heart failure and arrhythmias)
-        - chronic liver hepatitis
-        - endocrine problems (Such as diabetes)
-        - stunted growth
-        - osteoporosis
-        - thrombophilia
+  - text: |
+      There are many risks from thalassemia if proper care is not taken. These include:
+      - heart disease (heart failure and arrhythmias)
+      - chronic liver hepatitis
+      - endocrine problems (Such as diabetes)
+      - stunted growth
+      - osteoporosis
+      - thrombophilia
   utter_home_care:
-    - text: |
-        - Keep a low iron diet
-        - Exercising 
-        - Avoid infections by keeping a good hygiene
-        - Develop a positive relationship with people around you (for mental health)
+  - text: |
+      - Keep a low iron diet
+      - Exercise
+      - Avoid infections by keeping a good hygiene
+      - Develop a positive relationship with people around you (for mental health)
   utter_types:
-    - text: There are two types of Thalassemia, Major and Minor Thalassemia.
+  - text: There are two types of Thalassemia, Major and Minor Thalassemia.
+  utter_minor_treatment:
+  - text: Minor thalassemia patients do not show any symptoms, and therefore do not require any treatments.
 actions:
-  - action_query_database
+- action_query_database
 forms: {}
 e2e_actions: []
