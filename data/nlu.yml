@@ -142,7 +142,6 @@ nlu:
       - detection
       - test result
       - results
-      
 
   - intent: symptoms ###
     examples: |
@@ -156,7 +155,6 @@ nlu:
       - thalassemic
       - symptoms
       - any symptoms
-    
 
   - intent: prevention
     examples: |
@@ -220,18 +218,12 @@ nlu:
       - genetics 
       - genes
       - heredity
-    
 
   - intent: info_majorthal ####
     examples: |
       - What is major thalassemia?
       - Is major thalssemia real?
       - What does major thalassemia mean?
-  # - intent: info_minorthal
-  #   examples: |
-  #     - What is minor thalassemia?
-  #     - Is minor thalssemia real?
-  #     - What does minor thalassemia mean?
 
   - intent: quality_of_life
     examples: |
